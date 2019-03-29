@@ -1,13 +1,17 @@
 from obstacle_tower_env import ObstacleTowerEnv
 import sys
 import argparse
+import tracer_agent
+
+agent= tracer_agent.TracerAgent()
 
 def run_episode(env):
     done = False
     episode_reward = 0.0
+    obs=env.reset()
     
     while not done:
-        action = env.action_space.sample()
+        action = agent.act(obs)
         obs, reward, done, info = env.step(action)
         episode_reward += reward
         
@@ -16,7 +20,6 @@ def run_episode(env):
 def run_evaluation(env):
     while not env.done_grading():
         run_episode(env)
-        env.reset()
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser()
