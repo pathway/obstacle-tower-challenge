@@ -1,7 +1,8 @@
 {
     "challenge_id" : "unity-obstacle-tower-challenge-2019",
     "grader_id": "unity-obstacle-tower-challenge-2019",
-    "authors" : ["aicrowd-user"],
-    "description" : "Obstacle Tower random agent",
-    "gpu": false
+    "authors" : ["robin_ranjit_singh_chauhan"],
+    "description" : "Obstacle Tower dizzy agent",
+    "gpu": false,
+    "debug": true
 }
